@@ -38,10 +38,10 @@ dependencies:
   auto_size_text: ^3.0.0
   quick_actions: ^1.0.7
   flutter_native_splash: ^2.2.19
-  syncfusion_flutter_core: ^28.1.33
-  syncfusion_flutter_calendar: ^28.1.33
-  syncfusion_flutter_charts: ^28.1.33
-  syncfusion_flutter_datepicker: ^28.1.33
+  syncfusion_flutter_core: ^28.1.39
+  syncfusion_flutter_calendar: ^28.1.39
+  syncfusion_flutter_charts: ^28.1.39
+  syncfusion_flutter_datepicker: ^28.1.39
   google_maps_flutter: ^2.5.3
   video_player: ^2.6.1
   barcode_widget: ^2.0.4
@@ -90,6 +90,11 @@ dependency_overrides:
     git:
       url: https://github.com/jakobkoerber/flutter_linkify
       ref: master
+  home_widget:
+    git:
+      url: https://github.com/jakobkoerber/home_widget.git
+      ref: main
+      path: packages/home_widget
 
 dev_dependencies:
   # code generation

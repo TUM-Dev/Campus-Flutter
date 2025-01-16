@@ -59,7 +59,7 @@ Please refer to the respective installation instructions:
 |------------------------------------------|------------------------------------------|----------------------------------------------|
 | `Flutter` (includes the `Dart` compiler) | SDK to develop this app                  | https://docs.flutter.dev/get-started/install |
 
-### Updating the `.proto` files of the
+### Updating the `.proto` files
 
 To update the generated stubs for the Campus, you need protoc installed, then activte it in dart and then you can generate the new client
 
@@ -70,15 +70,16 @@ curl -o protos/tumdev/campus_backend.proto https://raw.githubusercontent.com/TUM
 protoc --dart_out=grpc:lib/base/networking/apis -I./protos google/protobuf/timestamp.proto google/protobuf/empty.proto tumdev/campus_backend.proto 
 ```
 
-### Current needed Forks
+### Currently needed Forks
 
 To ensure that campus_flutter runs on every supported platform, we need to make some modifications to packages.
 
-| Package         | Reason                              | Link                                         |
-|-----------------|-------------------------------------|----------------------------------------------|
-| gRPC            | Caching                             | https://github.com/jakobkoerber/grpc-dart |
-| Xml2Json        | Fix Parsing of XML to JSON          | https://github.com/jakobkoerber/xml2json |
+| Package         | Reason                              | Link                                            |
+|-----------------|-------------------------------------|-------------------------------------------------|
+| gRPC            | Caching                             | https://github.com/jakobkoerber/grpc-dart       |
+| Xml2Json        | Fix Parsing of XML to JSON          | https://github.com/jakobkoerber/xml2json        |
 | flutter_linkify | Fix Selection Menu and Text Scaling | https://github.com/jakobkoerber/flutter_linkify |
+| home_widget     | Fix App Crash                       | https://github.com/jakobkoerber/home_widget     |
 
 
 

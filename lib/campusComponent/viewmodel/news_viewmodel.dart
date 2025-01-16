@@ -16,6 +16,11 @@ class NewsViewModel {
     return NewsService.fetchRecentNews(forcedRefresh).then(
       (value) {
         lastFetched.add(value.$1);
+        value.$2.sort((news1, news2) {
+          final date1 = news1.date.toDateTime();
+          final date2 = news2.date.toDateTime();
+          return date2.compareTo(date1);
+        });
         newsBySource.add(mapNewsBySource(value.$2));
         news.add(value.$2);
       },

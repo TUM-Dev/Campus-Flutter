@@ -36,21 +36,23 @@ class NewsScreen extends ConsumerWidget {
                 return TabBarView(
                   children: [
                     for (var collection in snapshot.data!.values)
-                      GridView.count(
-                        crossAxisCount: crossAxisCount(context),
-                        mainAxisSpacing: context.padding,
-                        crossAxisSpacing: context.padding,
-                        padding: EdgeInsets.all(context.padding),
-                        childAspectRatio: 1.1,
-                        children: [
-                          for (var news in collection)
-                            LayoutBuilder(
-                              builder: (context, constraints) => NewsCardView(
-                                news: news,
-                                width: constraints.maxWidth,
+                      Scrollbar(
+                        child: GridView.count(
+                          crossAxisCount: crossAxisCount(context),
+                          mainAxisSpacing: context.padding,
+                          crossAxisSpacing: context.padding,
+                          padding: EdgeInsets.all(context.padding),
+                          childAspectRatio: 1.1,
+                          children: [
+                            for (var news in collection)
+                              LayoutBuilder(
+                                builder: (context, constraints) => NewsCardView(
+                                  news: news,
+                                  width: constraints.maxWidth,
+                                ),
                               ),
-                            ),
-                        ],
+                          ],
+                        ),
                       ),
                   ],
                 );

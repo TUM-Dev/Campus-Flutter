@@ -27,13 +27,15 @@ class CampusScreen extends StatelessWidget {
   }
 
   Widget body() {
-    return const SingleChildScrollView(
-      child: Column(
-        children: [
-          NewsWidgetView(),
-          StudentClubWidgetView(),
-          MovieWidgetView(),
-        ],
+    return const Scrollbar(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            NewsWidgetView(),
+            StudentClubWidgetView(),
+            MovieWidgetView(),
+          ],
+        ),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:campus_flutter/base/extensions/string_capitalize.dart';
 import 'package:campus_flutter/base/util/string_parser.dart';
 import 'package:campus_flutter/base/networking/apis/tumdev/campus_backend.pbgrpc.dart';
 import 'package:campus_flutter/base/routing/routes.dart';
@@ -87,7 +88,7 @@ class NewsCardView extends ConsumerWidget {
                       Expanded(
                         flex: 3,
                         child: Text(
-                          news.title,
+                          news.title.capitalizeFirstLetter(),
                           style: Theme.of(context)
                               .textTheme
                               .titleMedium

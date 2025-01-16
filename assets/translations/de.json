@@ -21,6 +21,7 @@
   "tokenPermissions": "Berechtigungen für Token",
   "permissionChangePossibleInTUMonline": "Du kannst deine Berechtigungen in TUMOnline ändern",
   "login": "Anmelden",
+  "logout": "Abmelden",
   "notLoggedIn": "Nicht angemeldet!",
   "profileError": "Profil konnte nicht geladen werden!",
   "welcomeToTheApp": "Willkommen in der\n TUM Campus App",

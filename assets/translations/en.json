@@ -21,6 +21,7 @@
   "tokenPermissions": "Token Permissions",
   "permissionChangePossibleInTUMonline": "You can change your permissions on TUMOnline",
   "login": "Login",
+  "logout": "Logout",
   "notLoggedIn": "Not Logged In!",
   "profileError": "Error fetching profile!",
   "welcomeToTheApp": "Welcome to the TUM Campus App",

@@ -111,7 +111,7 @@ class SettingsView extends ConsumerWidget {
               textAlign: TextAlign.center,
             )
           : Text(
-              context.tr("resetLogin"),
+              context.tr("logout"),
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     color: Colors.red,
                     fontWeight: FontWeight.w500,

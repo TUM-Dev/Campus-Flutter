@@ -33,11 +33,13 @@ class MovieScreen extends ConsumerWidget {
           ),
           body: () {
             if (snapshot.hasData) {
-              return MovieGridView(
-                movies: snapshot.data!,
-                padding: EdgeInsets.all(context.padding),
-                crossAxisCount: GridUtility.campusCrossAxisCount(context),
-                withinScrollView: false,
+              return Scrollbar(
+                child: MovieGridView(
+                  movies: snapshot.data!,
+                  padding: EdgeInsets.all(context.padding),
+                  crossAxisCount: GridUtility.campusCrossAxisCount(context),
+                  withinScrollView: false,
+                ),
               );
             } else if (snapshot.hasError) {
               return Center(

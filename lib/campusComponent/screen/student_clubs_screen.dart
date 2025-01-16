@@ -49,11 +49,13 @@ class StudentClubsScreen extends ConsumerWidget {
                 return TabBarView(
                   children: [
                     for (var collection in snapshot.data!)
-                      StudentClubGridView(
-                        studentClubs: collection.clubs,
-                        padding: EdgeInsets.all(context.padding),
-                        crossAxisCount: crossAxisCount(context),
-                        withinScrollView: false,
+                      Scrollbar(
+                        child: StudentClubGridView(
+                          studentClubs: collection.clubs,
+                          padding: EdgeInsets.all(context.padding),
+                          crossAxisCount: crossAxisCount(context),
+                          withinScrollView: false,
+                        ),
                       ),
                   ],
                 );
